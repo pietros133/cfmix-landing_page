@@ -1240,18 +1240,31 @@ Olá! Gostaria de solicitar um orçamento.
               </div>
             </div>
           </div>
-
+          ```tsx
           <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-gray-600 text-xs">
               © 2026 CFMIX Concreto Usinado. Todos os direitos reservados.
             </p>
 
-            <a
-              href="#"
-              className="text-gray-600 hover:text-orange text-xs transition-colors"
-            >
-              Política de Privacidade
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-orange text-xs transition-colors"
+              >
+                Política de Privacidade
+              </a>
+
+              <span className="text-gray-700 text-xs">|</span>
+
+              <a
+                href="https://devpietro.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-orange text-xs transition-colors"
+              >
+                Desenvolvido por Pietro Miranda
+              </a>
+            </div>
           </div>
         </div>
       </footer>
