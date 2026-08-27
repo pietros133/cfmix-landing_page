@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 const WA_CARLA = "5511996747678";
 const WA_FLAVIO = "5511940097798";
-
+import logo from "./assets/logo.png";
+import cfmixVideo from "./assets/cfmixvideo.mp4";
+import cfmixImage from "./assets/cfmix.jpeg";
 const waLink = (
   number: string,
   msg = "Olá! Gostaria de solicitar um orçamento de concreto usinado.",
@@ -379,11 +381,7 @@ function BtnGhost({
 function CFMIXLogo() {
   return (
     <div className="flex items-center gap-3 shrink-0">
-      <img
-        src="/assets/logo.png"
-        alt="CFMIX"
-        className="h-10 w-auto object-contain"
-      />
+      <img src={logo} alt="CFMIX" className="h-10 w-auto object-contain" />
 
       <div className="leading-tight">
         <div className="text-white font-heading font-bold text-xl tracking-wide leading-none">
@@ -808,7 +806,7 @@ Olá! Gostaria de solicitar um orçamento.
           </div>
           <div className="relative overflow-hidden bg-graphite aspect-video">
             <video
-              src="/assets/cfmixvideo.mp4"
+              src={cfmixVideo}
               controls
               playsInline
               preload="metadata"
@@ -862,7 +860,7 @@ Olá! Gostaria de solicitar um orçamento.
             <div className="relative">
               <div className="aspect-[4/3] overflow-hidden bg-graphite-mid">
                 <img
-                  src="/assets/cfmix.jpeg"
+                  src={cfmixImage}
                   alt="Caminhão bomba de concreto em operação"
                   className="w-full h-full object-cover opacity-80"
                 />
