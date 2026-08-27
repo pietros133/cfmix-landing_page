@@ -1,12 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>CFMIX Concreto Usinado</title>
+
+    <meta
+      name="description"
+      content="CFMIX Concreto Usinado — Locação de bombas de concreto para sua obra."
+    />
   </head>
+
   <body>
+    <form name="orcamento" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <select name="service">
+        <option value="">Selecione o serviço</option>
+        <option value="Laje">Laje</option>
+        <option value="Viga">Viga</option>
+        <option value="Pilar">Pilar</option>
+        <option value="Piso polido">Piso polido</option>
+        <option value="Piso industrial">Piso industrial</option>
+        <option value="Piso de concreto">Piso de concreto</option>
+        <option value="Baldrame">Baldrame</option>
+        <option value="Bombeamento de concreto">Bombeamento de concreto</option>
+        <option value="Outro">Outro</option>
+      </select>
+      <textarea name="message"></textarea>
+      <input type="hidden" name="form-name" value="orcamento" />
+    </form>
+
     <div id="root"></div>
+
     <script type="module" src="/main.tsx"></script>
   </body>
 </html>
