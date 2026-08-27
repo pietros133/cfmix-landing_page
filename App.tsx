@@ -533,65 +533,76 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 bg-graphite ${scrolled ? "shadow-2xl" : ""}`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 bg-graphite ${
+          scrolled ? "shadow-2xl" : ""
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            <a href="#inicio">
+          <div className="flex items-center justify-between h-16 lg:h-20 gap-3">
+            {/* LOGO */}
+            <a
+              href="#inicio"
+              className="shrink-0"
+              onClick={() => setMenuOpen(false)}
+            >
               <CFMIXLogo />
             </a>
 
-            <nav className="hidden lg:flex items-center gap-7">
+            {/* MENU DESKTOP */}
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
               {NAV_LINKS.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
-                  className="text-gray-400 hover:text-white text-[11px] font-semibold tracking-widest uppercase transition-colors"
+                  className="text-gray-400 hover:text-white text-[11px] font-semibold tracking-widest uppercase transition-colors whitespace-nowrap"
                 >
                   {l.label}
                 </a>
               ))}
             </nav>
 
-            <div className="flex items-center gap-3">
-              <BtnPrimary
-                href="#contato"
-                className="hidden md:inline-flex text-xs px-5 py-2.5"
-              >
-                Solicitar orçamento
-              </BtnPrimary>
+            {/* HAMBURGER */}
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
               <button
+                type="button"
                 onClick={() => setMenuOpen((o) => !o)}
-                className="lg:hidden text-white p-1.5"
-                aria-label="Abrir menu"
+                className="lg:hidden flex items-center justify-center text-white w-10 h-10 p-0 border border-white/10 hover:bg-white/5 transition-colors"
+                aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+                aria-expanded={menuOpen}
               >
                 <IcoMenu open={menuOpen} />
               </button>
             </div>
           </div>
 
-          {/* Mobile menu */}
-          {menuOpen && (
-            <div className="lg:hidden border-t border-white/10 pb-5">
+          {/* MENU MOBILE */}
+          <div
+            className={`lg:hidden overflow-hidden transition-all duration-300 ${
+              menuOpen ? "max-h-[600px] opacity-100 pb-5" : "max-h-0 opacity-0"
+            }`}
+          >
+            <nav className="border-t border-white/10 pt-2">
               {NAV_LINKS.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block py-3 text-gray-300 hover:text-orange text-sm font-medium tracking-wide border-b border-white/5 transition-colors"
+                  className="flex items-center py-3.5 text-gray-300 hover:text-orange text-sm font-medium tracking-wide border-b border-white/5 transition-colors"
                 >
                   {l.label}
                 </a>
               ))}
+
+              {/* BOTÃO DE ORÇAMENTO NO MENU MOBILE */}
               <BtnPrimary
                 href="#contato"
-                className="mt-4 w-full"
+                className="w-full mt-4"
                 onClick={() => setMenuOpen(false)}
               >
-                Solicitar orçamento
+                Solicitar orçamento <IcoArrow />
               </BtnPrimary>
-            </div>
-          )}
+            </nav>
+          </div>
         </div>
       </header>
 
