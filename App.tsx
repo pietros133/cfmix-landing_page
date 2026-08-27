@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import logo from "./assets/logo.png";
 const WA_CARLA = "5511996747678";
 const WA_FLAVIO = "5511940097798";
 const waLink = (
@@ -477,11 +477,7 @@ function BtnGhost({
 function CFMIXLogo() {
   return (
     <div className="flex items-center gap-3 shrink-0">
-      <img
-        src="/assets/logo.png"
-        alt="CFMIX"
-        className="h-10 w-auto object-contain"
-      />
+      <img src={logo} alt="CFMIX" className="h-10 w-auto object-contain" />
 
       <div className="leading-tight">
         <div className="text-white font-heading font-bold text-xl tracking-wide leading-none">
