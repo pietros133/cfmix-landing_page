@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-graphite: #18191c;
+  --color-graphite-mid: #2e2f33;
+  --color-graphite-muted: #6b6b6b;
+
+  --color-orange: #2e8b57;
+
+  --color-concrete: #eef6fa;
+
+  --font-heading: "Barlow Condensed", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #18191c;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0369a1;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
