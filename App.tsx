@@ -6,7 +6,7 @@ import cfmixVideo from "./assets/cfmixvideo.mp4";
 import cfmixImage from "./assets/cfmix.jpeg";
 const waLink = (
   number: string,
-  msg = "Olá! Gostaria de solicitar um orçamento de concreto usinado.",
+  msg = "Olá! Gostaria de solicitar um orçamento!.",
 ) => `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
 
 const NAV_LINKS = [
@@ -550,7 +550,7 @@ Olá! Gostaria de solicitar um orçamento.
             </h1>
 
             <p className="text-gray-300 text-base sm:text-lg mb-10 max-w-xl leading-relaxed">
-              Locação de bombas de concreto com segurança, precisão e alto
+            Locação de bombas de concreto com segurança, precisão e alto nível de eficiência.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10">
