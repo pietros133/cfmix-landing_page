@@ -6,7 +6,7 @@ import cfmixVideo from "./assets/cfmixvideo.mp4";
 import cfmixImage from "./assets/cfmix.jpeg";
 const waLink = (
   number: string,
-  msg = "Olá! Gostaria de solicitar um orçamento!.",
+  msg = "Olá! Gostaria de solicitar um orçamento!",
 ) => `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
 
 const NAV_LINKS = [
