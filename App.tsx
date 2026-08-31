@@ -550,7 +550,7 @@ Olá! Gostaria de solicitar um orçamento.
             </h1>
 
             <p className="text-gray-300 text-base sm:text-lg mb-10 max-w-xl leading-relaxed">
-            Locação de bombas de concreto com segurança, precisão e alto nível de eficiência.
+              Locação de bombas de concreto com segurança, precisão e alto nível de eficiência.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10">
